@@ -1,0 +1,15 @@
+Package: xsarea
+Title: Calculate Cross-sectional Areas
+Version: 0.0.0.9000
+Authors@R: 
+    person("Harrison", "Brown", , "brownhr314@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Calculates the cross-sectional areas for hydrological surveys. Just a little personal package, but it could be expanded if there's a need for it.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Imports:
+    dplyr
+    pracma
