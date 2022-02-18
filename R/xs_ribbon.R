@@ -3,6 +3,7 @@
 #' @return A ggplot
 #' @import ggplot2
 #' @importFrom rlang .data
+#' @export
 
 
 # Tentative way of plotting the area lower than Bankful. It's a bit inaccurate if

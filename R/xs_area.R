@@ -4,6 +4,7 @@
 #' @importFrom magrittr %>%
 #' @importFrom rlang .data
 #' @import dplyr
+#' @export
 
 
 
