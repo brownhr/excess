@@ -4,32 +4,32 @@
 #' @importFrom magrittr %>%
 #' @importFrom rlang .data
 #' @import dplyr
-#' @export xs_area
+#' @export
 
 ## quiets concerns of R CMD check re: the .'s that appear in pipelines
 if(getRversion() >= "2.15.1")  utils::globalVariables(c("."))
 
 
 
-# Function is Depreciated... remove later
-xs_area2 <- function(.data) {
-  # Mutate the InvertRod to be relative to Bankful;
-  # This can easily be appended to also calculate area relative to another
-  # feature, such as WS or whatever else.
-
-
-  # Set values of InvertRod > Bankful equal to Bankful, then normalize the
-  # whole dataset such that Bankful = 0 (baseline)
-
-  .data <- .data %>%
-    dplyr::mutate(Depth_Baseline = (pmin(.data$InvertRod, .data$Bankful) - .data$Bankful))
-
-
-  # Approximate integration using trapezoidal rule with basepoints at x = xs$TAPE
-  area <- abs(pracma::trapz(x = .data$TAPE,
-                            y = .data$Depth_Baseline))
-  return(area)
-}
+# # Function is Depreciated... remove later
+# xs_area2 <- function(.data) {
+#   # Mutate the InvertRod to be relative to Bankful;
+#   # This can easily be appended to also calculate area relative to another
+#   # feature, such as WS or whatever else.
+#
+#
+#   # Set values of InvertRod > Bankful equal to Bankful, then normalize the
+#   # whole dataset such that Bankful = 0 (baseline)
+#
+#   .data <- .data %>%
+#     dplyr::mutate(Depth_Baseline = (pmin(.data$InvertRod, .data$Bankful) - .data$Bankful))
+#
+#
+#   # Approximate integration using trapezoidal rule with basepoints at x = xs$TAPE
+#   area <- abs(pracma::trapz(x = .data$TAPE,
+#                             y = .data$Depth_Baseline))
+#   return(area)
+# }
 
 
 xs_area <- function(.data,
