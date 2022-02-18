@@ -2,16 +2,22 @@
 % Please edit documentation in R/xs_area.R
 \name{xs_area}
 \alias{xs_area}
-\title{Calculate XS area from data}
+\title{Calculate Cross-sectional area}
 \usage{
 xs_area(.data, .x_cor = TAPE, .invertrod = InvertRod, .bankfull = Bankful)
 }
 \arguments{
 \item{.data}{A data.frame of cross-section data}
+
+\item{.x_cor}{A column of x-coordinates (default, \emph{TAPE})}
+
+\item{.invertrod}{A column of rod readings, relative to 0 (i.e. >0) (default, \emph{InvertRod})}
+
+\item{.bankfull}{A column of bankfull readings, used as a baseline (default, \emph{Bankful})}
 }
 \value{
-A Double of the cross-sectional area compared to a baseline (default, \emph{Bankful})
+A Double of the cross-sectional area compared to a baseline
 }
 \description{
-Calculate XS area from data
+Calculate Cross-sectional area
 }
