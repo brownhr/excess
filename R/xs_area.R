@@ -18,7 +18,7 @@ xs_area <- function(.data,
   .bankfull <- enquo(.bankfull)
 
   .data %>%
-    mutate(depth_bf = pmin(!!.bankfull,!!.invertrod)-!!.bankfull) %>%
+    mutate(depth_bf = pmin(!!.bankfull, !!.invertrod) - !!.bankfull) %>%
     summarize(area = abs(pracma::trapz(
       x = !!.x_cor,
       y = .data$depth_bf

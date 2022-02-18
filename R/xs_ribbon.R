@@ -13,7 +13,8 @@ xs_ribbon <- function(.data) {
   gg <-
     ggplot(data = .data, aes(x = .data$TAPE, y = .data$InvertRod)) +
     geom_path() +
-    geom_path(aes(x = .data$TAPE, y = .data$Bankful)) + geom_ribbon(
+    geom_path(aes(x = .data$TAPE, y = .data$Bankful)) +
+    geom_ribbon(
       aes(
         x = .data$TAPE,
         ymax = .data$Bankful,

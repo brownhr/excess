@@ -1,6 +1,6 @@
 Package: xsarea
 Title: Calculate Cross-sectional Areas
-Version: 0.0.1.9002
+Version: 0.0.1.9003
 Authors@R: 
     person("Harrison", "Brown", , "brownhr314@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
