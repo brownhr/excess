@@ -17,3 +17,7 @@ Imports:
     tibble,
     ggplot2,
     pracma
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr
