@@ -4,11 +4,15 @@
 #' @importFrom magrittr %>%
 #' @importFrom rlang .data
 #' @import dplyr
-#' @export
+#' @export xs_area
+
+## quiets concerns of R CMD check re: the .'s that appear in pipelines
+if(getRversion() >= "2.15.1")  utils::globalVariables(c("."))
 
 
 
-xs_area <- function(.data) {
+# Function is Depreciated... remove later
+xs_area2 <- function(.data) {
   # Mutate the InvertRod to be relative to Bankful;
   # This can easily be appended to also calculate area relative to another
   # feature, such as WS or whatever else.
@@ -26,6 +30,24 @@ xs_area <- function(.data) {
                             y = .data$Depth_Baseline))
   return(area)
 }
+
+
+xs_area <- function(.data,
+                     .x_cor = TAPE,
+                     .invertrod = InvertRod,
+                     .bankfull = Bankful) {
+  .x_cor <- enquo(.x_cor)
+  .invertrod <- enquo(.invertrod)
+  .bankfull <- enquo(.bankfull)
+
+  .data %>%
+    mutate(depth_bf = pmin(!!.bankfull, !!.invertrod)-!!.bankfull) %>%
+    summarize(area = abs(pracma::trapz(x = !!.x_cor,
+                                       y = .data$depth_bf))) %>%
+    as.double()
+}
+
+
 
 # path <- "data"
 
