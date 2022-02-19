@@ -11,7 +11,7 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Imports:
     magrittr,
-    rlang,
+    rlang (>= 0.4.11),
     dplyr,
     readxl,
     tibble,
@@ -19,5 +19,6 @@ Imports:
     pracma
 Suggests: 
     rmarkdown,
-    knitr
+    knitr,
+    roxygen2
 VignetteBuilder: knitr

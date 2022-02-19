@@ -15,46 +15,5 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-library(xsarea)
+library(excess)
 ```
-
-
-## `xs_area()`
-
-This function takes as input a `tibble`, `data.frame`, etc. of cross-section data to calculate cross-sectional area. A 'baseline' is required (such as bankfull height); otherwise, a value of 0 is used.
-
-### Examples
-
-```{r xs-area-ex, eval = F}
-data <- readxl::read_xlsx("SITE1_XS1.xlsx")
-
-head(data)
-# # A tibble: 6 x 6
-#    TAPE   ROD Notes          InvertRod    WS Bankful
-#   <dbl> <dbl> <chr>              <dbl> <dbl>   <dbl>
-# 1  0     0.83 Stake on Left~     -0.83 -4.03   -3.53
-# 2  1     1.26 NA                 -1.26 -4.03   -3.53
-# 3  3     1.48 spring fed tr~     -1.48 -4.03   -3.53
-
-area <- xs_area(data)
-
-# [1] 17.032
-
-
-```
-
-
-```{r multi-area, eval = F}
-
-files <- list.files(path = "data", pattern = ".csv", full.names = TRUE)
-
-area_list <- lapply(files, function(x){
-  data <- read.csv(x)
-  
-  area <- xs_area(data)
-  return(area)
-})
-
-
-```
-

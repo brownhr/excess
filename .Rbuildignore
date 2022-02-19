@@ -1,6 +1,7 @@
-^xsarea\.Rproj$
+^excess\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
 ^doc$
 ^Meta$
 ^data$
+^README\.Rmd$
