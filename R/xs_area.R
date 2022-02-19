@@ -1,8 +1,8 @@
 #' Calculate Cross-sectional area
 #' @param .data A data.frame of cross-section data
 #' @param .x_cor A column of x-coordinates (default, *TAPE*)
-#' @param .invertrod A column of rod readings, relative to 0 (i.e. >0) (default, *InvertRod*)
-#' @param .bankfull A column of bankfull readings, used as a baseline (default, *Bankful*)
+#' @param .invertrod A column of rod readings, relative to 0 (i.e. >0)
+#' @param .bankfull A column of bankfull readings, used as a baseline
 #' @return A Double of the cross-sectional area compared to a baseline
 #' @importFrom magrittr %>%
 #' @importFrom rlang .data

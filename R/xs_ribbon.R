@@ -6,8 +6,8 @@
 #' @export
 
 
-# Tentative way of plotting the area lower than Bankful. It's a bit inaccurate if
-# there isn't an observation at InvertRod == Bankful
+# Tentative way of plotting the area lower than Bankful.
+# It's a bit inaccurate if there isn't an observation at InvertRod == Bankful
 
 xs_ribbon <- function(.data) {
   gg <-
@@ -25,5 +25,3 @@ xs_ribbon <- function(.data) {
     )
   return(gg)
 }
-
-# cowplot::plot_grid(plotlist = xs_gg, labels = rownames(xs_areas))
