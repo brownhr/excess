@@ -15,7 +15,7 @@ You can install the development version of excess from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("brownhr/xsarea")
+devtools::install_github("brownhr/excess")
 ```
 
 ## Example
