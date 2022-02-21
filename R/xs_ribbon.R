@@ -15,11 +15,11 @@ xs_ribbon <- function(.data,
                       baseline = "Bankful",
                       ...) {
   gg <-
-    ggplot(data = .data) +
-    geom_path(aes(x = .data[[x_cor]], y = .data[[depth]])) +
-    geom_path(aes(x = .data[[x_cor]], y = .data[[baseline]])) +
-    geom_ribbon(
-      aes(
+    ggplot2::ggplot(data = .data) +
+    ggplot2::geom_path(ggplot2::aes(x = .data[[x_cor]], y = .data[[depth]])) +
+    ggplot2::geom_path(ggplot2::aes(x = .data[[x_cor]], y = .data[[baseline]])) +
+    ggplot2::geom_ribbon(
+      ggplot2::aes(
         x = .data[[x_cor]],
         ymax = .data[[baseline]],
         ymin = pmin(.data[[baseline]], .data[[depth]])
