@@ -4,7 +4,7 @@
 \alias{xs_area}
 \title{Calculate Cross-sectional area}
 \usage{
-xs_area(.data, x_cor = TAPE, invertrod = InvertRod, bankfull = Bankful)
+xs_area(.data, x_cor = TAPE, invertrod = InvertRod, baseline = Bankful)
 }
 \arguments{
 \item{.data}{A data.frame of cross-section data}
@@ -13,7 +13,7 @@ xs_area(.data, x_cor = TAPE, invertrod = InvertRod, bankfull = Bankful)
 
 \item{invertrod}{A column of rod readings, relative to 0 (i.e. >0)}
 
-\item{bankfull}{A column of bankfull readings, used as a baseline}
+\item{baseline}{A column of baseline readings, defaults to Bankful}
 }
 \value{
 A Double of the cross-sectional area compared to a baseline
