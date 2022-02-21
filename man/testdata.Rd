@@ -13,15 +13,10 @@ A tibble of 34 rows and 3 variables:
 }
 }
 \usage{
-data(testdata)
+testdata
 }
 \description{
 Cross-sectional data acquired from the Watauga River, Boone, N.C., U.S.
-}
-\examples{
-data(testdata)
-plot(testdata$TAPE, testdata$InvertRod)
-
 }
 \author{
 Josh Platt
