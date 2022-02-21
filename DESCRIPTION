@@ -1,13 +1,14 @@
 Package: excess
-Title: Tools for Working with Cross-Section Data
-Version: 0.0.3.9001
+Title: Tools for Cross-Section Hydrological Data
+Version: 0.0.4
 Date: 2022-02-22
 Authors@R: 
     person("Harrison", "Brown", , "brownhr314@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Calculates the cross-sectional areas for hydrological
-    surveys. Just a little personal package, but it could be expanded if
-    there's a need for it.
+           comment = c(ORCID = "0000-0002-0993-5879"))
+Description: Suite of tools for use in hydrological analyses such as
+    stream-flow, Total Suspended Sediment, etc. This package is currently
+    in development, with future releases adding (far) more functionality.
+    in development.
 License: MIT + file LICENSE
 Depends: 
     R (>= 2.10)
