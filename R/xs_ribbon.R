@@ -15,8 +15,8 @@ xs_ribbon <- function(.data,
                       baseline = "Bankful",
                       ...) {
   gg <-
-    ggplot(data = .data, aes(x = .data[[x_cor]], y = .data[[depth]])) +
-    geom_path() +
+    ggplot(data = .data) +
+    geom_path(aes(x = .data[[x_cor]], y = .data[[depth]])) +
     geom_path(aes(x = .data[[x_cor]], y = .data[[baseline]])) +
     geom_ribbon(
       aes(
