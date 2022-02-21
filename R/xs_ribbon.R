@@ -1,4 +1,11 @@
-#' Generate an area plot in ggplot2
+#' @title Generate an area plot using ggplot2
+#'
+#' @description `xs_area()` creates an area plot of the cross-section, using
+#'   `ggplot2::geom_ribbon()`. Currently, small inaccuracies exist if the
+#'   channel bed crosses the y-intercept created by `baseline`, but this
+#'   function is for visualization only. This will (hopefully) be fixed in a
+#'   future version of this package.
+#'
 #' @param .data A data.frame of cross-section data
 #' @param x_cor A column of x-coordinates (default, *TAPE*)
 #' @param depth A column of rod readings, relative to 0 (i.e. >0) (default,

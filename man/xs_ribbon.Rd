@@ -2,7 +2,7 @@
 % Please edit documentation in R/xs_ribbon.R
 \name{xs_ribbon}
 \alias{xs_ribbon}
-\title{Generate an area plot in ggplot2}
+\title{Generate an area plot using ggplot2}
 \usage{
 xs_ribbon(
   .data,
@@ -28,5 +28,9 @@ xs_ribbon(
 An object of class \code{ggplot}
 }
 \description{
-Generate an area plot in ggplot2
+\code{xs_area()} creates an area plot of the cross-section, using
+\code{ggplot2::geom_ribbon()}. Currently, small inaccuracies exist if the
+channel bed crosses the y-intercept created by \code{baseline}, but this
+function is for visualization only. This will (hopefully) be fixed in a
+future version of this package.
 }
