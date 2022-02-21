@@ -2,16 +2,16 @@
 % Please edit documentation in R/xs_area.R
 \name{xs_area}
 \alias{xs_area}
-\title{Calculate Cross-sectional area}
+\title{Cross-Sectional area}
 \usage{
-xs_area(.data, x_cor = TAPE, invertrod = InvertRod, baseline = Bankful)
+xs_area(.data, x_cor = "TAPE", depth = "InvertRod", baseline = "Bankful")
 }
 \arguments{
 \item{.data}{A data.frame of cross-section data}
 
 \item{x_cor}{A column of x-coordinates (default, \emph{TAPE})}
 
-\item{invertrod}{A column of rod readings, relative to 0 (i.e. >0)}
+\item{depth}{A column of rod readings, relative to 0 (i.e. >0)}
 
 \item{baseline}{A column of baseline readings, defaults to Bankful}
 }
@@ -19,5 +19,8 @@ xs_area(.data, x_cor = TAPE, invertrod = InvertRod, baseline = Bankful)
 A Double of the cross-sectional area compared to a baseline
 }
 \description{
-Calculate Cross-sectional area
+Calculate area of a cross-section using the trapezoidal rule for
+integration. By default, uses the columns "TAPE" for measurement across xs,
+"InvertRod" for depth relative to y = 0, and "Bankful" for baseline
+measurement.
 }
