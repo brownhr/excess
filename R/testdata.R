@@ -8,11 +8,12 @@
 #' @docType data
 #'
 #'
-#'
+#' @usage NULL
 #' @format A tibble of 34 rows and 3 variables:
 #' \describe{
 #'   \item{TAPE}{Tape measurement; x-coordinate}
 #'   \item{InvertRod}{Depth measurement in meters}
 #'   \item{Bankful}{Bankful measurement}
 #' }
+
 "testdata"
