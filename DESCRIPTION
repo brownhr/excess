@@ -1,28 +1,30 @@
 Package: excess
 Title: Tools for Working with Cross-Section Data
-Version: 0.0.3.9000
+Version: 0.0.3.9001
 Date: 2022-02-22
 Authors@R: 
     person("Harrison", "Brown", , "brownhr314@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Calculates the cross-sectional areas for hydrological surveys. Just a little personal package, but it could be expanded if there's a need for it.
+Description: Calculates the cross-sectional areas for hydrological
+    surveys. Just a little personal package, but it could be expanded if
+    there's a need for it.
 License: MIT + file LICENSE
+Depends: 
+    R (>= 2.10)
+Imports:
+    dplyr,
+    ggplot2,
+    magrittr,
+    pracma,
+    readxl,
+    rlang (>= 0.4.11),
+    tibble
+Suggests: 
+    knitr,
+    rmarkdown,
+    roxygen2
+VignetteBuilder: 
+    knitr
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-LazyData: true
-Imports:
-    magrittr,
-    rlang (>= 0.4.11),
-    dplyr,
-    readxl,
-    tibble,
-    ggplot2,
-    pracma
-Suggests: 
-    rmarkdown,
-    knitr,
-    roxygen2
-VignetteBuilder: knitr
-Depends: 
-    R (>= 2.10)
