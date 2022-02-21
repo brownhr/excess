@@ -31,7 +31,7 @@ devtools::install_github("brownhr/excess")
 
 ## Calculating cross-sectional area
 
-Under the hood, the `xs_area()` function calculates the area of a cross-section through use of the **trapezoidal rule**, as provided by the `pracma` function
+Under the hood, the `xs_area()` function calculates the area of a cross-section through use of the **trapezoidal rule**, as provided by the `pracma` package.
 
 
 ```{r testdata}
