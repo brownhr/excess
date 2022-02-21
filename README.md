@@ -6,7 +6,9 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of excess is to …
+The `excess` package is designed to provide a set of tools and workflows
+to analyze and interpret hydrological cross-sectional data. This package
+is currently in development, so use with caution :smile:.
 
 ## Installation
 
