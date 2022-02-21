@@ -20,9 +20,7 @@ xs_area <- function(.data,
                     depth = "InvertRod",
                     baseline = "Bankful") {
   .data %>%
-    dplyr::mutate(
-      depth_baseline =
-        pmin(.data[[baseline]], .data[[depth]]) - .data[[baseline]]) %>%
+    dplyr::mutate(depth_baseline = pmin(.data[[baseline]], .data[[depth]]) - .data[[baseline]]) %>%
     dplyr::summarize(area = abs(pracma::trapz(
       x = .data[[x_cor]],
       y = .data$depth_baseline
