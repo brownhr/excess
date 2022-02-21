@@ -4,13 +4,28 @@
 \alias{xs_ribbon}
 \title{Generate an area plot in ggplot2}
 \usage{
-xs_ribbon(.data)
+xs_ribbon(
+  .data,
+  x_cor = "TAPE",
+  depth = "InvertRod",
+  baseline = "Bankful",
+  ...
+)
 }
 \arguments{
-\item{.data}{Cross section data}
+\item{.data}{A data.frame of cross-section data}
+
+\item{x_cor}{A column of x-coordinates (default, \emph{TAPE})}
+
+\item{depth}{A column of rod readings, relative to 0 (i.e. >0) (default,
+\emph{InvertRod})}
+
+\item{baseline}{A column of baseline readings (default, \emph{Bankful})}
+
+\item{...}{Other arguments passed on to methods.}
 }
 \value{
-A ggplot
+An object of class \code{ggplot}
 }
 \description{
 Generate an area plot in ggplot2
