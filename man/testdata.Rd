@@ -3,14 +3,21 @@
 \docType{data}
 \name{testdata}
 \alias{testdata}
-\title{Sample cross-sectional data}
+\title{Sample cross-sectional data
+Cross-sectional data acquired from the Watauga River, Boone, N.C., U.S.}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 34 rows and 3 columns.
+A tibble of 34 rows and 3 variables:
+\describe{
+\item{TAPE}{Tape measurement; x-coordinate}
+\item{InvertRod}{Depth measurement in meters}
+\item{Bankful}{Bankful measurement}
+}
 }
 \usage{
 testdata
 }
 \description{
+Sample cross-sectional data
 Cross-sectional data acquired from the Watauga River, Boone, N.C., U.S.
 }
 \author{
