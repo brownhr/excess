@@ -11,6 +11,8 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+
+library(excess)
 ```
 
 # excess
@@ -42,12 +44,17 @@ head(testdata)
 ```
 
 
+```{r data, eval = F}
+## If you can't find the `testdata` object, load it with data()
+
+data(testdata)
+```
+
+
+
 ```{r xs-area}
 
-# Here's some test data to use!
-data <- excess::testdata
-
-xs_area(data)
+xs_area(testdata)
 
 ```
 

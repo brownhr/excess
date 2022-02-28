@@ -24,7 +24,7 @@ devtools::install_github("brownhr/excess")
 
 Under the hood, the `xs_area()` function calculates the area of a
 cross-section through use of the **trapezoidal rule**, as provided by
-the `pracma` function
+the `pracma` package.
 
 ``` r
 library(excess)
@@ -42,10 +42,13 @@ head(testdata)
 ```
 
 ``` r
-# Here's some test data to use!
-data <- excess::testdata
+## If you can't find the `testdata` object, load it with data()
 
-xs_area(data)
+data(testdata)
+```
+
+``` r
+xs_area(testdata)
 #> [1] 23.4665
 ```
 
