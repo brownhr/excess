@@ -15,5 +15,4 @@
 #'   \item{InvertRod}{Depth measurement in meters}
 #'   \item{Bankful}{Bankful measurement}
 #' }
-
 "testdata"
