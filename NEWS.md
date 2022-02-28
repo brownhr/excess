@@ -1,3 +1,5 @@
+# excess (development version)
+
 # excess 0.0.5
 
 * Added geom_boxplot2()
