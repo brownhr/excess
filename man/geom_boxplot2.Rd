@@ -175,6 +175,7 @@ the default plot specification, e.g. \code{\link[ggplot2:borders]{borders()}}.}
 \item{median.color}{A character color value}
 }
 \description{
-Custom implementation of ggplot2::geom_boxplot capable of
-displaying arbitrary quantiles.
+Creates a boxplot with an arbitrary set of quantiles. Credit to
+Z.lin on stackexchange
+https://stackoverflow.com/questions/28368963/ggplot-how-to-add-a-segment-with-stat-summary
 }

@@ -11,8 +11,8 @@ An object of class \code{StatBoxplot2} (inherits from \code{StatBoxplot}, \code{
 StatBoxplot2
 }
 \description{
-Creates a boxplot with an arbitrary set of quantiles. Credit to Z.lin on
-stackexchange
+Creates a boxplot with an arbitrary set of quantiles. Credit to
+Z.lin on stackexchange
 https://stackoverflow.com/questions/28368963/ggplot-how-to-add-a-segment-with-stat-summary
 }
 \keyword{datasets}

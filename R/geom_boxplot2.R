@@ -1,8 +1,9 @@
-#' Custom geom_boxplot
+#' @title Custom geom_boxplot
 #'
-#' Creates a boxplot with an arbitrary set of quantiles. Credit to Z.lin on
-#' stackexchange
-#' https://stackoverflow.com/questions/28368963/ggplot-how-to-add-a-segment-with-stat-summary
+#' @description  Creates a boxplot with an arbitrary set of quantiles. Credit to
+#'   Z.lin on stackexchange
+#'   https://stackoverflow.com/questions/28368963/ggplot-how-to-add-a-segment-with-stat-summary
+#'
 #' @import ggplot2
 #' @import grid
 #' @importFrom rlang %||%
@@ -50,8 +51,9 @@ StatBoxplot2 <- ggproto(
 
 
 #' @title geom_boxplot2
-#' @description Custom implementation of ggplot2::geom_boxplot capable of
-#'   displaying arbitrary quantiles.
+#' @description Creates a boxplot with an arbitrary set of quantiles. Credit to
+#'   Z.lin on stackexchange
+#'   https://stackoverflow.com/questions/28368963/ggplot-how-to-add-a-segment-with-stat-summary
 #' @inheritParams ggplot2::geom_boxplot
 #' @param median.colour A character color value
 #' @param median.color A character color value
