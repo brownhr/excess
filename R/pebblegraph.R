@@ -29,10 +29,14 @@
 #' @export
 
 
-plot_pebble <- function(data, ..., colNA = "red") {
+plot_pebble <- function(data,
+                        ...,
+                        colNA = "red"#,
+                        #col = grDevices::hsv(h = 0, s = 1:100/100, v = 1)
+                        ) {
   rlang::check_installed(pkg = "raster", reason = "to use `excess::plot_pebble()`")
 
-  p <- .pebble(data = data)
-  raster::plot(p, colNA = colNA)
+  p <- .pebble(data = data, ...)
+  raster::plot(p, colNA = colNA, col = col)
 
 }
