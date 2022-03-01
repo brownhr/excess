@@ -19,6 +19,7 @@ Imports:
     rlang (>= 0.4.11),
     tibble
 Suggests: 
+    raster,
     knitr,
     rmarkdown,
     roxygen2
