@@ -14,6 +14,8 @@
 #' @importFrom rlang .data
 #' @importFrom dplyr summarize mutate
 #' @export
+#' @example
+#'   xs_area(testxs)
 
 xs_area <- function(.data,
                     x_cor = "TAPE",

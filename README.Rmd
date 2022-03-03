@@ -39,7 +39,7 @@ Under the hood, the `xs_area()` function calculates the area of a cross-section 
 ```{r testdata}
 library(excess)
 
-head(testdata)
+head(testxs)
 
 ```
 
@@ -47,14 +47,14 @@ head(testdata)
 ```{r data, eval = F}
 ## If you can't find the `testdata` object, load it with data()
 
-data(testdata)
+data(testxs)
 ```
 
 
 
 ```{r xs-area}
 
-xs_area(testdata)
+xs_area(testxs)
 
 ```
 
@@ -63,6 +63,6 @@ You can visualize cross-sections with `xs_ribbon()`
 
 ```{r xs-ribbon}
 
-xs_ribbon(testdata)
+xs_ribbon(testxs)
 
 ```

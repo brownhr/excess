@@ -15,7 +15,7 @@
 #'   \item{InvertRod}{Depth measurement in meters}
 #'   \item{Bankful}{Bankful measurement}
 #' }
-"testdata"
+"testxs"
 
 
 #' @title Sample pebble count data 1
