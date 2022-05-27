@@ -21,7 +21,8 @@ Imports:
     readxl,
     rlang (>= 0.4.11),
     sf,
-    tibble
+    tibble,
+    xml2
 Suggests: 
     raster,
     knitr,
