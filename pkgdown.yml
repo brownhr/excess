@@ -1,0 +1,10 @@
+pandoc: 2.7.3
+pkgdown: 2.0.3
+pkgdown_sha: ~
+articles:
+  xs-area: xs-area.html
+last_built: 2022-05-27T05:33Z
+urls:
+  reference: https://brownhr.github.io/excess/reference
+  article: https://brownhr.github.io/excess/articles
+
