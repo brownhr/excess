@@ -15,8 +15,3 @@ Object of class "sf"
 \description{
 Reads a .jxl file as an R object
 }
-\examples{
-  file <- "C:/path/to/file/totalstation.jxl"
-  jxl <- read_jxl(file)
-
-}
