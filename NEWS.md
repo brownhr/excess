@@ -1,5 +1,7 @@
 # excess (development version)
 
+* Fiddled with `pkgdown` for the site documentation!
+
 # excess 0.0.5
 
 * Added geom_boxplot2()
