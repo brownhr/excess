@@ -6,3 +6,8 @@
 ^README\.Rmd$
 ^data-raw$
 ^data-ignore$
+^R/geom_boxplot2\.R$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.github$

@@ -14,7 +14,7 @@
 #' @importFrom rlang .data
 #' @importFrom dplyr summarize mutate
 #' @export
-#' @example
+#' @examples
 #'   xs_area(testxs)
 
 xs_area <- function(.data,

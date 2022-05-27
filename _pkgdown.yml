@@ -1,0 +1,4 @@
+url: https://brownhr.github.io/excess/
+template:
+  bootstrap: 5
+  bootswatch: minty

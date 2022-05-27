@@ -25,3 +25,6 @@ integration. By default, uses the columns "TAPE" for measurement across xs,
 "InvertRod" for depth relative to y = 0, and "Bankful" for baseline
 measurement.
 }
+\examples{
+  xs_area(testxs)
+}

@@ -1,0 +1,28 @@
+---
+title: "xs-area"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{xs-area}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(excess)
+```
+
+Calculates cross-sectional area given an input `xs_xs` object:
+
+```{r, eval = FALSE}
+area <- data %>% 
+  xs_area()
+  
+```
+
