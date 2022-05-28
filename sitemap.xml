@@ -34,16 +34,22 @@
     <loc>https://brownhr.github.io/excess/reference/index.html</loc>
   </url>
   <url>
+    <loc>https://brownhr.github.io/excess/reference/op-null.html</loc>
+  </url>
+  <url>
     <loc>https://brownhr.github.io/excess/reference/pebble1.html</loc>
   </url>
   <url>
     <loc>https://brownhr.github.io/excess/reference/plot_pebble.html</loc>
   </url>
   <url>
-    <loc>https://brownhr.github.io/excess/reference/read_tstxt.html</loc>
+    <loc>https://brownhr.github.io/excess/reference/read_jxl.html</loc>
   </url>
   <url>
     <loc>https://brownhr.github.io/excess/reference/testxs.html</loc>
+  </url>
+  <url>
+    <loc>https://brownhr.github.io/excess/reference/trap_area.html</loc>
   </url>
   <url>
     <loc>https://brownhr.github.io/excess/reference/xs_area.html</loc>
