@@ -1,4 +1,4 @@
-# excess (development version)
+# excess 0.0.6
 
 * Fixed #4 (and more) by refactoring `xs_area`
 * Fiddled with `pkgdown` for the site documentation!
