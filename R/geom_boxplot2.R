@@ -57,7 +57,6 @@ StatBoxplot2 <- ggproto(
 #' @inheritParams ggplot2::geom_boxplot
 #' @param median.colour A character color value
 #' @param median.color A character color value
-#' @export
 #'
 #'
 #' @example
