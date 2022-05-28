@@ -1,6 +1,6 @@
 Package: excess
 Title: Tools for Cross-Section Hydrological Data
-Version: 0.0.5.9003
+Version: 0.0.6
 Date: 2022-02-22
 Authors@R: 
     person("Harrison", "Brown", , "brownhr314@gmail.com", role = c("aut", "cre"),
@@ -14,19 +14,20 @@ Imports:
     dplyr,
     fs,
     ggplot2,
-    lidR,
     magrittr,
-    pracma,
     readr,
     readxl,
     rlang (>= 0.4.11),
     sf,
-    tibble
+    stringr,
+    tibble,
+    xml2
 Suggests: 
     raster,
     knitr,
     rmarkdown,
-    roxygen2
+    roxygen2,
+    testthat (>= 3.0.0)
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
@@ -36,3 +37,4 @@ URL: https://github.com/brownhr/excess,
     https://brownhr.github.io/excess/
 BugReports: https://github.com/brownhr/excess/issues
 LazyData: true
+Config/testthat/edition: 3

@@ -4,28 +4,35 @@
 #'   integration. By default, uses the columns "TAPE" for measurement across xs,
 #'   "InvertRod" for depth relative to y = 0, and "Bankful" for baseline
 #'   measurement.
-#' @param .data A data.frame of cross-section data
-#' @param x_cor A column of x-coordinates (default, *TAPE*)
-#' @param depth A column of rod readings, relative to 0 (i.e. >0) (default,
-#'   *InvertRod*)
-#' @param baseline A column of baseline readings (default, *Bankful*)
+#'
+#' @param data A data.frame of cross-section data
+#' @param tape Either a numeric vector of tape readings ("x coordinates").
+#' @param depth Either a numeric vector of rod readings ("y coordinates").
+#' @param baseline Either a double representing bankfull level.
+#'
 #' @return A Double of the cross-sectional area compared to a baseline
-#' @importFrom magrittr %>%
-#' @importFrom rlang .data
-#' @importFrom dplyr summarize mutate
 #' @export
 #' @examples
-#'   xs_area(testxs)
+#' area <- xs_area(testxs)
+#' print(area)
+#'
+xs_area <- function(data,
+                    tape = NULL,
+                    depth = NULL,
+                    baseline = NULL) {
+  # Allow for either a character vector or column name input
 
-xs_area <- function(.data,
-                    x_cor = "TAPE",
-                    depth = "InvertRod",
-                    baseline = "Bankful") {
-  .data %>%
-    dplyr::mutate(depth_baseline = pmin(.data[[baseline]], .data[[depth]]) - .data[[baseline]]) %>%
-    dplyr::summarize(area = abs(pracma::trapz(
-      x = .data[[x_cor]],
-      y = .data$depth_baseline
-    ))) %>%
-    as.double()
+  tape <- tape %||% data$TAPE
+  depth <- depth %||% data$InvertRod
+  baseline <- baseline %||% mean(data$Bankful)
+
+  depth_baseline <- pmin(baseline, depth) - baseline
+
+  area <- trap_area(x = tape,
+                            y = depth_baseline)
+  return(abs(area))
 }
+
+
+
+
