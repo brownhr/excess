@@ -4,17 +4,16 @@
 \alias{xs_area}
 \title{Cross-Sectional area}
 \usage{
-xs_area(.data, x_cor = "TAPE", depth = "InvertRod", baseline = "Bankful")
+xs_area(data, tape = NULL, depth = NULL, baseline = NULL)
 }
 \arguments{
-\item{.data}{A data.frame of cross-section data}
+\item{data}{A data.frame of cross-section data}
 
-\item{x_cor}{A column of x-coordinates (default, \emph{TAPE})}
+\item{tape}{Either a numeric vector of tape readings ("x coordinates").}
 
-\item{depth}{A column of rod readings, relative to 0 (i.e. >0) (default,
-\emph{InvertRod})}
+\item{depth}{Either a numeric vector of rod readings ("y coordinates").}
 
-\item{baseline}{A column of baseline readings (default, \emph{Bankful})}
+\item{baseline}{Either a double representing bankfull level.}
 }
 \value{
 A Double of the cross-sectional area compared to a baseline
@@ -26,5 +25,7 @@ integration. By default, uses the columns "TAPE" for measurement across xs,
 measurement.
 }
 \examples{
-  xs_area(testxs)
+area <- xs_area(testxs)
+print(area)
+
 }
