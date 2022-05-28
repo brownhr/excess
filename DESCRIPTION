@@ -15,7 +15,6 @@ Imports:
     fs,
     ggplot2,
     magrittr,
-    pracma,
     readr,
     readxl,
     rlang (>= 0.4.11),
