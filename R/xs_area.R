@@ -10,6 +10,8 @@
 #' @param depth Either a numeric vector of rod readings ("y coordinates").
 #' @param baseline Either a double representing bankfull level.
 #'
+#' @import units
+#'
 #' @return A Double of the cross-sectional area compared to a baseline
 #' @export
 #' @examples
@@ -19,7 +21,8 @@
 xs_area <- function(data,
                     tape = NULL,
                     depth = NULL,
-                    baseline = NULL) {
+                    baseline = NULL,
+                    units = "ft") {
   # Allow for either a character vector or column name input
 
   tape <- tape %||% data$TAPE

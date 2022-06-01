@@ -1,3 +1,3 @@
 test_that("multiplication works", {
-  expect_equal(xs_area(testxs), 23.4665)
+  expect_equal(units::set_units(xs_area(testxs), NULL), 23.4665)
 })
