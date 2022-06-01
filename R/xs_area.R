@@ -19,23 +19,22 @@
 #' print(area)
 #'
 xs_area <- function(data,
+                    Units = NULL,
                     tape = NULL,
                     depth = NULL,
-                    baseline = NULL,
-                    units = "ft") {
+                    baseline = NULL) {
   # Allow for either a character vector or column name input
+df <- data.frame(
+  tape = tape %||% data$TAPE,
+  depth = depth %||% data$InvertRod,
+  baseline = baseline %||% rep(mean(data$Bankful), nrow(data)))
 
-  tape <- tape %||% data$TAPE
-  depth <- depth %||% data$InvertRod
-  baseline <- baseline %||% mean(data$Bankful)
+
+
 
   depth_baseline <- pmin(baseline, depth) - baseline
 
   area <- trap_area(x = tape,
-                            y = depth_baseline)
+                    y = depth_baseline)
   return(abs(area))
 }
-
-
-
-

@@ -21,6 +21,7 @@ Imports:
     sf,
     stringr,
     tibble,
+    units,
     xml2
 Suggests: 
     raster,

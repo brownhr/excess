@@ -6,6 +6,10 @@
 #' @keywords internal
 NULL
 
+#' @importFrom magrittr %>%
+NULL
+
+
 #' @title NULL units if error
 #' @importFrom units units
 #' @keywords internal
