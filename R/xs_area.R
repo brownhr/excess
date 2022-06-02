@@ -29,9 +29,23 @@ xs_area <- function(data,
 
 
 
-  depth_baseline <- pmin(baseline, depth) - baseline
 
-  area <- trap_area(x = tape,
-                    y = depth_baseline)
-  return(abs(sum(area)))
+  z_baseline <- normalize_baseline(depth, baseline)
+    Area <- trap_area(tape, z_baseline)
+  return(sum(Area))
+}
+
+#' Normalize vector to baseline
+#' @param x Numeric vector
+#' @param baseline Number to normalize against
+#' @description Calculates "normalized" vector; equivalent to \code{pmin(x, y) - y}
+#' @export
+#' @examples
+#'   x <- rnorm(n = 20)
+#'   baseline <- 0
+#'   normalize_baseline(x, baseline)
+
+normalize_baseline <- function(x, baseline) {
+  x_baseline <- pmin(baseline, x) - baseline
+  return(x_baseline)
 }
