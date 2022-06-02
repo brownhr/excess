@@ -32,3 +32,19 @@
 #'   to river right (row 20)
 #'
 "pebble1"
+
+
+#' @title Test xs in \code{sf} format
+#'
+#' @description Simple example dataset of how to use data created by \code{sf}
+#' @docType data
+#' @author Harrison Brown
+#' @usage NULL
+#' @format A data frame with 34 rows and 4 variables:
+#' \describe{
+#'   \item{\code{TAPE}}{double Cross-section measurement}
+#'   \item{\code{InvertRod}}{double Depth measurement}
+#'   \item{\code{Bankful}}{double Baseline measurement}
+#'   \item{\code{geometry}}{list \code{geometry} column of class `sfc`}
+#'}
+"test_sf"
