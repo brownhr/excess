@@ -4,7 +4,7 @@
 \alias{xs_area}
 \title{Cross-Sectional area}
 \usage{
-xs_area(data, Units = NULL, tape = NULL, depth = NULL, baseline = NULL)
+xs_area(data, tape = NULL, depth = NULL, baseline = NULL)
 }
 \arguments{
 \item{data}{A data.frame of cross-section data}

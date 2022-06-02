@@ -11,13 +11,13 @@ NULL
 
 
 #' @title NULL units if error
-#' @importFrom units units
+#' @import units
 #' @keywords internal
 #' @param x Numeric Vector
 
 null_units <-
   function(x) {
-    if(!is.numeric(x))
+    if (!is.numeric(x))
       stop("`x` must be numeric")
     tryCatch(
       expr = {

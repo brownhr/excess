@@ -10,8 +10,6 @@
 #' @param depth Either a numeric vector of rod readings ("y coordinates").
 #' @param baseline Either a double representing bankfull level.
 #'
-#' @import units
-#'
 #' @return A Double of the cross-sectional area compared to a baseline
 #' @export
 #' @examples
@@ -19,15 +17,14 @@
 #' print(area)
 #'
 xs_area <- function(data,
-                    Units = NULL,
                     tape = NULL,
                     depth = NULL,
                     baseline = NULL) {
   # Allow for either a character vector or column name input
-df <- data.frame(
-  tape = tape %||% data$TAPE,
-  depth = depth %||% data$InvertRod,
-  baseline = baseline %||% rep(mean(data$Bankful), nrow(data)))
+
+  tape = tape %||% data$TAPE
+  depth = depth %||% data$InvertRod
+  baseline = baseline %||% rep(mean(data$Bankful), nrow(data))
 
 
 
@@ -36,5 +33,5 @@ df <- data.frame(
 
   area <- trap_area(x = tape,
                     y = depth_baseline)
-  return(abs(area))
+  return(abs(sum(area)))
 }

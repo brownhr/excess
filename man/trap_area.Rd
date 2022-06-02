@@ -18,7 +18,3 @@ A double of the calculated area, with proper units of measurement
 \description{
 Calculate trapezoidal-rule area for two vectors
 }
-\examples{
- trap_area(x = seq(1, 10), y = runif(n = 10))
-
-}

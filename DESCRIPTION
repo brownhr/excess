@@ -12,15 +12,11 @@ Depends:
     R (>= 2.10)
 Imports:
     dplyr,
-    fs,
     ggplot2,
     magrittr,
-    readr,
-    readxl,
     rlang (>= 0.4.11),
     sf,
-    stringr,
-    tibble,
+    tidyselect,
     units,
     xml2
 Suggests: 
