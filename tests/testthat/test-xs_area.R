@@ -1,5 +1,5 @@
 test_that("multiplication works", {
-  expect_equal(object = as.numeric(xs_area(testxs)),-23.4665)
+  expect_equal(object = as.numeric(xs_area(testxs, TAPE, InvertRod, Bankful, TRUE)),-23.4665)
 })
 
 test_that("Units in testxs carry through xs-area", {
