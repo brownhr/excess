@@ -27,4 +27,3 @@ null_units <-
         NULL
     )
   }
-

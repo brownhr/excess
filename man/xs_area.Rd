@@ -4,16 +4,23 @@
 \alias{xs_area}
 \title{Cross-Sectional area}
 \usage{
-xs_area(data, tape = NULL, depth = NULL, baseline = NULL)
+xs_area(data, tape, depth, baseline, sum_area = TRUE)
 }
 \arguments{
 \item{data}{A data.frame of cross-section data}
 
-\item{tape}{Either a numeric vector of tape readings ("x coordinates").}
+\item{tape}{A column from \code{data} or a numeric vector of tape readings
+("x coordinates").}
 
-\item{depth}{Either a numeric vector of rod readings ("y coordinates").}
+\item{depth}{A column from \code{data} or a numeric vector of rod readings
+("y coordinates").}
 
-\item{baseline}{Either a double representing bankfull level.}
+\item{baseline}{A column from \code{data} or vector representing bankfull
+level.}
+
+\item{sum_area}{A logical (default \code{TRUE}) indicating whether to return
+a single summary of the trapezoidal area or a tibble indicating the area at
+each section.}
 }
 \value{
 A Double of the cross-sectional area compared to a baseline
@@ -23,9 +30,4 @@ Calculate area of a cross-section using the trapezoidal rule for
 integration. By default, uses the columns "TAPE" for measurement across xs,
 "InvertRod" for depth relative to y = 0, and "Bankful" for baseline
 measurement.
-}
-\examples{
-area <- xs_area(testxs)
-print(area)
-
 }

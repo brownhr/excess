@@ -240,3 +240,23 @@ GeomBoxplot2 <- ggproto(
     }
   }
 )
+
+
+xs_areaold <- function(data,
+                       tape = NULL,
+                       depth = NULL,
+                       baseline = NULL) {
+  # Allow for either a character vector or column name input
+
+  tape = tape %||% data$TAPE
+  depth = depth %||% data$InvertRod
+  baseline = baseline %||% rep(mean(data$Bankful), nrow(data))
+
+
+
+
+
+  z_baseline <- normalize_baseline(depth, baseline)
+  Area <- trap_area(tape, z_baseline)
+  return(sum(Area))
+}
