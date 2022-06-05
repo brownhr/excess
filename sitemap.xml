@@ -10,7 +10,13 @@
     <loc>https://brownhr.github.io/excess/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://brownhr.github.io/excess/articles/import-total-station.html</loc>
+  </url>
+  <url>
     <loc>https://brownhr.github.io/excess/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://brownhr.github.io/excess/articles/standardize_units.html</loc>
   </url>
   <url>
     <loc>https://brownhr.github.io/excess/articles/xs-area.html</loc>
@@ -34,6 +40,12 @@
     <loc>https://brownhr.github.io/excess/reference/index.html</loc>
   </url>
   <url>
+    <loc>https://brownhr.github.io/excess/reference/normalize_baseline.html</loc>
+  </url>
+  <url>
+    <loc>https://brownhr.github.io/excess/reference/null_units.html</loc>
+  </url>
+  <url>
     <loc>https://brownhr.github.io/excess/reference/op-null.html</loc>
   </url>
   <url>
@@ -44,6 +56,12 @@
   </url>
   <url>
     <loc>https://brownhr.github.io/excess/reference/read_jxl.html</loc>
+  </url>
+  <url>
+    <loc>https://brownhr.github.io/excess/reference/standardize_units.html</loc>
+  </url>
+  <url>
+    <loc>https://brownhr.github.io/excess/reference/test_sf.html</loc>
   </url>
   <url>
     <loc>https://brownhr.github.io/excess/reference/testxs.html</loc>
