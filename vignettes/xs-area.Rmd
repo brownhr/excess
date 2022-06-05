@@ -14,15 +14,66 @@ knitr::opts_chunk$set(
 )
 ```
 
+# Calculating the cross-sectional area of a stream
+
+For this guide, we'll take two approaches for calculating the area: one for non-georeferenced data (i.e., just a table with your measurements, as seen in `testxs`), and one for georeferenced data (made by `sf`).
+
+
+## Non-georeferenced data
+
+Suppose you have a dataset like that which exists in `testxs`:
+
 ```{r setup}
 library(excess)
+library(dplyr)
+library(ggplot2)
+library(units)
 ```
 
-Calculates cross-sectional area given an input `xs_xs` object:
-
-```{r, eval = FALSE}
-area <- data %>% 
-  xs_area()
-  
+```{r testxs}
+head(testxs)
 ```
+You'll notice that the data has linear units listen in `[ft]`. This comes from the [units](https://cran.r-project.org/web/packages/units/index.html) package. Units of measurement aren't necessary -- the functions work fine without them -- but it's definitely good practice to ensure you're calculating accurate results!
+
+Anyways, we wish to calculate the cross-sectional area of the stream, and we have both the "x coordinate" (`TAPE`) and the "z-coordinate" (`InvertRod`). The `Bankful` column represents the bankful height, which is the "reference" for the depth measurement.
+
+To calculate the cross-sectional area, `excess` uses the Trapezoidal Rule:
+
+
+```{r trap-area, warning = FALSE, echo = FALSE}
+testxs$depth_baseline <- pmin(testxs$InvertRod, testxs$Bankful) - testxs$Bankful
+
+testxs %>% 
+  ggplot(aes(x = TAPE, y = depth_baseline)) + 
+  geom_path() + 
+  geom_point() + 
+  # geom_vline(aes(xintercept = TAPE), linetype = "dashed") + 
+  geom_area(fill = "blue",
+            alpha = 0.25) + 
+  geom_segment(aes(x = TAPE, xend = lead(TAPE), 
+                   y = pmax(depth_baseline, lead(depth_baseline)), 
+                   yend = pmax(depth_baseline, lead(depth_baseline))),
+               color = "blue",
+               alpha = 0.5,
+               linetype = "dashed",
+               size = 1) + 
+  geom_segment(aes(x = TAPE, xend = TAPE,
+                   y = 0, yend = depth_baseline),
+               color = "blue",
+               alpha = 0.5,
+               linetype = "dashed",
+               size = 1) + 
+  labs(x = "Tape",
+       y = "Baseline Depth") + 
+  theme_light()
+
+```
+
+
+The trapezoidal area can be defined as:
+
+$$A = \frac{1}{2} (x_n - x_{n-1})(y_n + y_{n-1})$$
+
+For an implementation in R, we can use the `dplyr::lag()` and `dplyr::lead()` functions. 
+
 

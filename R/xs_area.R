@@ -5,34 +5,57 @@
 #'   "InvertRod" for depth relative to y = 0, and "Bankful" for baseline
 #'   measurement.
 #'
+#' @importFrom dplyr mutate summarize
+#' @importFrom rlang .data
 #' @param data A data.frame of cross-section data
-#' @param tape Either a numeric vector of tape readings ("x coordinates").
-#' @param depth Either a numeric vector of rod readings ("y coordinates").
-#' @param baseline Either a double representing bankfull level.
+#' @param tape A column from \code{data} or a numeric vector of tape readings
+#'   ("x coordinates").
+#' @param depth A column from \code{data} or a numeric vector of rod readings
+#'   ("y coordinates").
+#' @param baseline A column from \code{data} or vector representing bankfull
+#'   level.
+#' @param sum_area A logical (default \code{TRUE}) indicating whether to return
+#'   a single summary of the trapezoidal area or a tibble indicating the area at
+#'   each section.
 #'
 #' @return A Double of the cross-sectional area compared to a baseline
 #' @export
-#' @examples
-#' area <- xs_area(testxs)
-#' print(area)
 #'
-xs_area <- function(data,
-                    tape = NULL,
-                    depth = NULL,
-                    baseline = NULL) {
-  # Allow for either a character vector or column name input
 
-  tape <- tape %||% data$TAPE
-  depth <- depth %||% data$InvertRod
-  baseline <- baseline %||% mean(data$Bankful)
 
-  depth_baseline <- pmin(baseline, depth) - baseline
+xs_area <- function(data, tape, depth, baseline, sum_area = TRUE){
 
-  area <- trap_area(x = tape,
-                            y = depth_baseline)
-  return(abs(area))
+  # I know this is a horrible way of doing things, but I wanted to either use
+  # tidyeval (not quote column names) or pass a vector to one of the
+  # arguments.
+  A <- data %>%
+    dplyr::mutate(
+      depth_baseline = normalize_baseline({{depth}}, {{baseline}})
+      ) %>%
+    dplyr::summarize(
+      Area = trap_area({{tape}}, .data$depth_baseline)
+    ) %>%
+    `[[`(1)
+
+
+  if(sum_area) {
+    return(sum(A))
+  } else {
+    return(A)
+  }
 }
 
+#' Normalize vector to baseline
+#' @param x Numeric vector
+#' @param baseline Number to normalize against
+#' @description Calculates "normalized" vector; equivalent to \code{pmin(x, y) - y}
+#' @export
+#' @examples
+#'   x <- rnorm(n = 20)
+#'   baseline <- 0
+#'   normalize_baseline(x, baseline)
 
-
-
+normalize_baseline <- function(x, baseline) {
+  x_baseline <- pmin(baseline, x) - baseline
+  return(x_baseline)
+}

@@ -1,3 +1,7 @@
+# excess (development version)
+
+* Use `renv`
+
 # excess 0.0.6
 
 * Fixed #4 (and more) by refactoring `xs_area`

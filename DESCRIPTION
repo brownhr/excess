@@ -1,6 +1,6 @@
 Package: excess
 Title: Tools for Cross-Section Hydrological Data
-Version: 0.0.6
+Version: 0.0.6.9003
 Date: 2022-02-22
 Authors@R: 
     person("Harrison", "Brown", , "brownhr314@gmail.com", role = c("aut", "cre"),
@@ -12,15 +12,12 @@ Depends:
     R (>= 2.10)
 Imports:
     dplyr,
-    fs,
     ggplot2,
     magrittr,
-    readr,
-    readxl,
     rlang (>= 0.4.11),
     sf,
-    stringr,
-    tibble,
+    tidyselect,
+    units,
     xml2
 Suggests: 
     raster,
