@@ -38,6 +38,8 @@ Under the hood, the `xs_area()` function calculates the area of a cross-section 
 
 ```{r testdata}
 library(excess)
+library(units)
+library(dplyr)
 
 head(testxs)
 
@@ -54,7 +56,11 @@ data(testxs)
 
 ```{r xs-area}
 
-xs_area(testxs)
+testxs %>% 
+  xs_area(tape = TAPE,
+          depth = InvertRod,
+          baseline = Bankful,
+          sum_area = T)
 
 ```
 
@@ -66,3 +72,7 @@ You can visualize cross-sections with `xs_ribbon()`
 xs_ribbon(testxs)
 
 ```
+
+
+For more information, check out the vignettes by navigating to https://brownhr.github.io/excess
+
