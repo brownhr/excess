@@ -59,3 +59,14 @@ normalize_baseline <- function(x, baseline) {
   x_baseline <- pmin(baseline, x) - baseline
   return(x_baseline)
 }
+#
+#
+# Area <- function(object, ...){
+#   UseMethod("Area", object)
+# }
+#
+# Area.xs <- function(xs, units){
+#
+# }
+
+
