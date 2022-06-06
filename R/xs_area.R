@@ -1,11 +1,36 @@
 
-#' @export
+#' @title FUNCTION_TITLE
+#' @description FUNCTION_DESCRIPTION
+#' @param x PARAM_DESCRIPTION
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @examples 
+#' \dontrun{
+#' if(interactive()){
+#'  #EXAMPLE1
+#'  }
+#' }
+#' @rdname xs_area
+#' @export 
 xs_area <- function(x) {
   UseMethod("xs_area")
 }
 
 
-#' @export
+#' @title FUNCTION_TITLE
+#' @description FUNCTION_DESCRIPTION
+#' @param x PARAM_DESCRIPTION
+#' @param sum_area PARAM_DESCRIPTION, Default: TRUE
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @examples 
+#' \dontrun{
+#' if(interactive()){
+#'  #EXAMPLE1
+#'  }
+#' }
+#' @rdname xs_area.default
+#' @export 
 xs_area.default <- function(x, sum_area = TRUE) {
   t <- attr(x, "tape")
   d <- attr(x, "depth")
@@ -40,6 +65,20 @@ xs_area.default <- function(x, sum_area = TRUE) {
 
 
 
+#' @title FUNCTION_TITLE
+#' @description FUNCTION_DESCRIPTION
+#' @param x PARAM_DESCRIPTION
+#' @param baseline PARAM_DESCRIPTION
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @examples 
+#' \dontrun{
+#' if(interactive()){
+#'  #EXAMPLE1
+#'  }
+#' }
+#' @rdname normalize_baseline
+#' @export 
 normalize_baseline <- function(x, baseline) {
   x_baseline <- pmin(baseline, x) - baseline
   return(x_baseline)
