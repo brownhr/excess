@@ -38,28 +38,9 @@ xs_area.default <- function(x, sum_area = TRUE) {
 #   }
 # }
 
-#' Normalize vector to baseline
-#' @param x Numeric vector
-#' @param baseline Number to normalize against
-#' @description Calculates "normalized" vector; equivalent to \code{pmin(x, y) - y}
-#' @export
-#' @examples
-#'   x <- rnorm(n = 20)
-#'   baseline <- 0
-#'   normalize_baseline(x, baseline)
+
 
 normalize_baseline <- function(x, baseline) {
   x_baseline <- pmin(baseline, x) - baseline
   return(x_baseline)
 }
-#
-#
-# Area <- function(object, ...){
-#   UseMethod("Area", object)
-# }
-#
-# Area.xs <- function(xs, units){
-#
-# }
-
-
