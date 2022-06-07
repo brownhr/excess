@@ -34,11 +34,11 @@ xs_area.xs <- function(x, sum_area = TRUE) {
 }
 
 #' @method xs_area default
+#' @importFrom rlang abort
 #' @export
 
 xs_area.default <- function(x) {
-  rlang::warn("Class of `x` is not `xs`; consider coercing with the `xs()` function.")
-
+  rlang::abort("Class of `x` is not `xs`; consider coercing with the `xs()` function.")
 }
 
 # xs_area.data.frame <- function(data, tape, depth, baseline, sum_area = TRUE){
